@@ -31,11 +31,11 @@ def main():
         
         elif choice == '4':
             description = input("Enter task description to assign priority: ")
-            priority = input("Enter new priority: ")
+            priority = input("Enter new priority (High, Medium, Low): ")
             taskMan.assignPriority(description, priority)
         
         elif choice == '5':
-            description = input("Enter priority to filter tasks: ")
+            description = input("Enter priority to filter tasks (High, Medium, Low): ")
             taskMan.filterByPriority(priority)
         
         elif choice == '6':
