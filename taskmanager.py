@@ -18,6 +18,19 @@ class TaskManager:
         for task in self.tasks:
             print(f"{task.description} - Priority: {task.priority} - Completed: {task.completed}")
 
+    def createTask(self, description, priority):
+        task = Task(description, priority)
+        self.tasks.append(task)
+    
+    def removeTask(self, description):
+        for task in self.tasks:
+            if task.description == description:
+                self.tasks.remove(task)
+    
+    def displayTasks(self):
+        for task in self.tasks:
+            print(f"{task.description} - Priority: {task.priority} - Completed: {task.completed}")
+
     def assignPriority(self, description, priority):
         for task in self.tasks:
             if task.description == description:
