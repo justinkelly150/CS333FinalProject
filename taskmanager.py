@@ -4,6 +4,7 @@ class TaskManager:
     
     def __init__(self):
         self.tasks = []
+        self.filteredTasks = []
     
     def createTask(self, description, priority):
         task = Task(description, priority)
@@ -40,10 +41,15 @@ class TaskManager:
         for task in self.tasks:
             if task.description == description:
                 task.completed = True
-                self.removeTask(description)
+                
 
     def filterByPriority(self, priority):
         filteredTasks = [task for task in self.tasks if task.priority == priority]
         for task in filteredTasks:
             print(f"{task.description} - Priority: {task.priority} - Completed {task.completed}")
+    
+    def removeCompleteTask(self):
+        for task in self.tasks:
+            if task.completed == True:
+                self.tasks.remove(task)
                     
