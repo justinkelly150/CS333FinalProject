@@ -37,4 +37,4 @@ jobs:
 
     - name: Unit and Integration Tests
       run: |
-        py -m unittest tests.py
+        python3 -m unittest tests.py
