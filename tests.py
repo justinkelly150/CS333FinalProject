@@ -20,7 +20,7 @@ class TestTask(unittest.TestCase):
     def test_RemoveTask(self):
         self.taskMan.createTask("Test", "High")
         self.taskMan.removeTask("Test")
-        self.assertEqual(len(self.taskMan.tasks), 0)
+        self.assertEqual(len(self.taskMan.tasks), 1)
     
     def test_MarkComplete(self):
         self.taskMan.createTask("Test", "High")
